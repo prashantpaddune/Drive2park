@@ -39,14 +39,15 @@ var Main = React.createClass({
               <Login/>
             </div> 
           </div>
-          <div className="jumbotron" style={{'backgroundImage': 'url(./assets/images/img1.jpg)', 'height': '400px', 'backgroundPosition': 'center', 'backgroundSize': '100% 100%'}}>
+          <div className="jumbotron">
             <h2 className="text-center" style={{'color': 'white', 'textShadow': '3px 3px 10px black', 'fontSize': '54px'}}>Drive2park</h2>
               <form className="form-inline pull-left navbar-form form-group" role="form">
                 <input type="text" className="form-control" placeholder="San Ramon, CA"/>
                 <input type="Date" className="form-control" placeholder="DDMMYY"/>   
                 <button type="submit" className="btn btn-primary"> Search </button>
             </form>
-          </div>  
+          </div> 
+          <ListParking /> 
         </div>
       </div>            
     );
