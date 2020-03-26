@@ -54,7 +54,7 @@ app.post("/upload", function(res,req){
   }
 })
 //Coonect to Mongoose
-mongoose.connect("mongodb://localhost:27017/rezUp", {
+mongoose.connect("mongodb://localhost:27017/drive2park", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });

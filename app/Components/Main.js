@@ -2,8 +2,8 @@
 var React = require("react");
 
 // Here we include all of the sub-components
-var ListPropertyForm = require("./Children/ListPropertyForm");
-var SearchPropertyForm = require("./Children/SearchPropertyForm");
+var ListParking = require("./Children/ListParking");
+var SearchParking = require("./Children/SearchParking");
 var Login = require("./Children/LoginPage");
 var SignUp = require("./Children/SignUpPage");
 
@@ -77,8 +77,7 @@ var Main = React.createClass({
             </div>
 
              <div id="navbarForm" className="pull-left">
-              <a href="../ListPropertyForm.js" id="ListPropertyButton" className="btn btn-default navbar-btn" 
-                     aria-expanded="false">
+              <a href="../ListParking.js" id="ListPropertyButton" className="btn btn-default navbar-btn" aria-expanded="false">
                 <span className="" aria-hidden="true"></span>
                     List Your Event Space
                 <span className="caret"></span>
@@ -94,7 +93,7 @@ var Main = React.createClass({
                 <button type="submit" className="btn btn-primary"> Search </button>
             </form>
           </div> 
-           <ListPropertyForm/>
+           <ListParking /> 
         </div>
       </div>            
     );
