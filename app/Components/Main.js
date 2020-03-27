@@ -6,37 +6,42 @@ var ListParking = require("./Children/ListParking");
 var SearchParking = require("./Children/SearchParking");
 var Login = require("./Children/LoginPage");
 var SignUp = require("./Children/SignUpPage");
+var Link = require("react-router").Link;
 
 // Helper for making AJAX requests to our API
 var helpers = require("./utils/helpers");
 
 var Main = React.createClass({
 
+
   
- getInitialState: function() {
-    return { searchTerm: "", results: "", history: [], isLoggedIn: false };
-  },
+getInitialState: function() {
+  return { isLoggedIn: false, userId: ""};
+},
 
   componentWillMount: function () {
-    debugger
     var self = this;
     helpers.isLoggedIn().then(function (res) {
-      self.setState({isLoggedIn: res.data})
+      self.setState({
+        isLoggedIn: res.data.isAuthenticated,
+        userId: res.data.userId
+
+      })
     })
   },
 
   renderLoginButtons: function () {
     return (
         <div id="navbarForm" className="pull-right">
-          <a href="#" id="signInBtn" className="btn btn-default navbar-btn dropdown-toggle" data-toggle="dropdown"
+          <a href="#" id="signInBtn" className="btn btn-success navbar-btn dropdown-toggle" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
             <span className="glyphicon glyphicon-user" aria-hidden="true"></span>
-                Sign In
-            <span className="caret"></span>
+                &nbsp;&nbsp;Sign In
+
           </a>
-          <a href="#" id="registerBtn" className="btn btn-default navbar-btn" data-toggle="modal" data-target="#registerModal">
+          <a href="#" id="registerBtn" className="btn btn-primary navbar-btn" data-toggle="modal" data-target="#registerModal">
             <span className="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                Register
+                &nbsp;&nbsp;Register
           </a>
           <SignUp handleLogIn={this.handleLogIn}/>
           <Login handleLogIn={this.handleLogIn}/>
@@ -44,59 +49,72 @@ var Main = React.createClass({
       )
   },
 
-  handleLogIn: function () {
-    this.setState({isLoggedIn: true})
+  handleLogIn: function (userId) {
+    this.setState({isLoggedIn: true, userId: userId})
   },
 
   handleLogOut: function () {
     var self = this;
     helpers.logOut().then(function() {
-      self.setState({isLoggedIn: false})
+      self.setState({isLoggedIn: false, userId: ""})
     })
   },
 
   renderLogOutButton: function () {
      return (
+
         <div id="navbarForm" className="pull-right">
-          <a href="#" id="signInBtn" onClick={this.handleLogOut} className="btn btn-default navbar-btn">
+
+          <Link to="/list" id="ListPropertyButton" className="btn btn-success navbar-btn" 
+                aria-expanded="false"><span className="glyphicon glyphicon-pencil" aria-hidden="true"></span>&nbsp;Add New Space
+          </Link>
+          <a href="#" id="signInBtn"  onClick={this.handleLogOut} className="btn btn-danger navbar-btn">
             <span className="glyphicon glyphicon-user" aria-hidden="true"></span>
-              Log Out
+              &nbsp;&nbsp;Log Out
           </a>
         </div>
       )
   },
   // Here we describe this component's render method
   render: function() {
-    // (condition ? (if condition is true do this) : (if condition is false do this)
+    var self = this;
+    var childWithProp = React.Children.map(this.props.children, function (child) {
+      return React.cloneElement(child, {userId: self.state.userId});
+    });
     return ( 
-      <div className="container-fluid">
-        <div id="content-holder" className="container">
-          <div className="navbar navbar-inverse">
-            <div className="pull-left navbar-brand">
-              <a href="#">Drive2park</a>
-            </div>
+        <div>
+            <nav className="navbar navbar-inverse">
+              <div className="container-fluid">
+                <div className="navbar-header">
+                  <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span>
+                    <span className="icon-bar"></span> 
+                  </button>
+                  <img id="logo" src="assets/images/Rez-Up-Logo-v2.png"/>
+                </div>
+                <div className="collapse navbar-collapse" id="myNavbar">
+                  <ul className="nav navbar-nav">
 
-             <div id="navbarForm" className="pull-left">
-              <a href="../ListParking.js" id="ListPropertyButton" className="btn btn-default navbar-btn"
-                     aria-expanded="false">
-                <span className="" aria-hidden="true"></span>
-                    List Your Event Space
-                <span className="caret"></span>
-              </a>
+
+                    <li className="active"><Link to="/">Home</Link></li>
+                  </ul>
+                 {/* <Link to="/list" id="ListPropertyButton" className="btn btn-default navbar-btn" 
+                          aria-expanded="false">List Property
+
+                     <span className="" aria-hidden="true"></span>
+                         List Your Event Space
+                     <span className="caret"></span>
+                   </Link>*/}
+                    {this.state.isLoggedIn ? this.renderLogOutButton() : this.renderLoginButtons()}
+
+                </div>
               </div>
-            {this.state.isLoggedIn ? this.renderLogOutButton() : this.renderLoginButtons()}
-          </div>
-          <div className="jumbotron">
-            <h2 className="text-center" style={{'color': 'white', 'textShadow': '3px 3px 10px black', 'fontSize': '54px'}}>Drive2park</h2>
-              <form className="form-inline pull-left navbar-form form-group" role="form">
-                <input type="text" className="form-control" placeholder="San Ramon, CA"/>
-                <input type="Date" className="form-control" placeholder="DDMMYY"/>   
-                <button type="submit" className="btn btn-primary"> Search </button>
-            </form>
-          </div> 
-           <ListParking /> 
-        </div>
-      </div>            
+            </nav>
+          {childWithProp} 
+
+           
+       </div> 
     );
   }
 });

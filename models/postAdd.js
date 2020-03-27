@@ -4,6 +4,10 @@ var Schema = mongoose.Schema;
 
 
 var PostAdd = new Schema({
+  userId:{
+    type: String
+  },
+
   venueName: {
     type: String,
     trim: true,
@@ -12,7 +16,6 @@ var PostAdd = new Schema({
   // email: a string that must match an email format and must be unique in the collection
   email: {
     type: String,
-    unique: true,
     match: [/.+\@.+\..+/, "Please enter a valid e-mail address"]
   },
   // userCreated: the current date
@@ -21,25 +24,56 @@ var PostAdd = new Schema({
     
   },
   occupancy: {
-    type: Number,
+    type: String,
     
   },
     amenities: [{
     type: String
 }],
+  description:{
     
-  date: {
-    type: Date,
+    type: String,
+  },
+   address: {
+    type: String,
     
   },
+  city: {
+    type: String,
+    
+  },
+  state: {
+    type: String,
+    
+  },
+  postal: {
+    type: String,
+    
+  },
+  country: {
+    type: String,
+    
+  },
+    
+  date: {
+    type: String,
+    
+  },
+
+  days:{
+   type: String,
+  },
+
   time: [{
-    type: Number
+    type: String
 }],
   price: {
-    type: Number,
-    
+    type: String,
   }
- 
+  ,
+  images: [{
+    type: String
+}]
   
 });
 
