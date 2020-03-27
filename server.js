@@ -53,18 +53,11 @@ app.post("/upload", function(res,req){
     }
   }
 })
-//Coonect to Mongoose
-mongoose.connect("mongodb://localhost:27017/drive2park", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
 
 //View engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-//uncomment after placing favicon in public 
-// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico'));
 app.use(logger('dev'));
 // app.use(methodOverride('_method'))
 app.use(bodyParser.json());
@@ -113,30 +106,34 @@ app.post('/insert', function(req, res, next){
 });
 //catch 404 and forward to error handler
 app.use((req, res, next) => {
-	const err = new Error("Not Found");
-	err.status = 404;
-	next(err);
+  const err = new Error("Not Found");
+  err.status = 404;
+  next(err);
 });
 
 // error handler
 app.use((err, req, res, next) => {
-	res.locals.message = err.message;
-	res.locals.error = req.app.get('env') === 'development' ? err : {};
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 })
 
 const PORT = process.env.PORT || 3001;
 
-const db = mongoose.connection;
-
-
-db.on('error', (err) => {
-  console.log('Mongoose Error: ', err);
-});
-
-db.once('open', () => {
-  console.log('Mongoose connection successful.');
+// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
+var db = process.env.MONGODB_URI || "mongodb://localhost/drive2park";
+// Connect mongoose to our database
+mongoose.connect(db, { useNewUrlParser: true, useUnifiedTopology: true, autoIndex: true, useCreateIndex: true, },
+    function(error) {
+  // Log any errors connecting with mongoose
+  if (error) {
+    console.log(error);
+  }
+  // Or log a success message
+  else {
+    console.log("mongoose connection is successful");
+  }
 });
 
 app.listen(PORT, function(){
-  console.log(("Express server listening on port " + PORT))
+  console.log(("Express server listening on port " + PORT));
 });

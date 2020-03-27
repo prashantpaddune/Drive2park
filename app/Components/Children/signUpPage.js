@@ -37,7 +37,7 @@ var SignUp = React.createClass({
     helpers.registerUser(this.state).then(function (res) {
       if (res.data.success) {
         $("#registerModal").modal('hide')
-        self.props.handleLogIn()
+        self.props.handleLogIn(res.data.userId)
       }
     })
   },
@@ -49,7 +49,7 @@ var SignUp = React.createClass({
       
             <div className="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel">
             
-            <div className="modal-dialog modal-sm" role="document">
+            <div className="modal-dialog" role="document">
                 <div className="modal-content">
                     <div className="modal-header"> <h3> Register with Drive2park! </h3> </div>
                     <div className="modal-body">

@@ -2,14 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const User = require('../../models/user.js');
-
+var PostAdd = require('../../models/postAdd');
 const router = express.Router();
 
 // configure mongoose promises
 mongoose.Promise = global.Promise;
 
 router.get('/authenticated', (req, res) => {
-  res.send(req.isAuthenticated());
+  res.send(JSON.stringify({isAuthenticated: req.isAuthenticated(), userId: req.user ? req.user._id : ""}))
 })
 
 // POST to /register
@@ -25,7 +25,7 @@ router.post('/register', (req, res) => {
     }
     //else return JSON object w/ the new user info
     passport.authenticate('local')(req, res, function () {
-      res.send(JSON.stringify({success: true}))
+      res.send(JSON.stringify({success: true, userId: user._id}))
     });
   });
 });
@@ -53,5 +53,39 @@ router.get('/logout', (req, res) => {
   req.logout();
   return res.send(JSON.stringify(req.user));
 });
+
+//Post new property to Mongo DB
+router.post('/insert', function(req, res){
+  var propObj = JSON.stringify(req.body);
+  var newProperty = new PostAdd(JSON.parse(propObj));
+  newProperty.save(function(error, doc) {
+      console.log('Doc id  --',doc);
+    if(error){
+      console.log('Mongo Error  --',error);
+      res.send(error);
+    }
+    else{
+      res.send(doc);
+    }
+  });
+});
+
+router.get('/saved/:city',function(req,res){
+
+  PostAdd.find({ city: req.params.city}, function(err, doc) {
+  if (err) throw err;
+  console.log(doc);
+  res.json(doc);
+});
+
+});
+
+router.get('/property/:id', function(req, res) {
+  PostAdd.find({ _id: req.params.id}, function(err, doc) {
+    if (err) throw err;
+    console.log(doc)
+    res.json(doc)
+  })
+})
 
 module.exports = router;
