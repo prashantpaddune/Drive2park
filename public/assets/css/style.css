@@ -10,6 +10,7 @@
     
         margin:0; /*add this*/
         background-color: white;
+        border:solid 2px white;
     }
 
     .indexlable {
@@ -18,14 +19,14 @@
     }
 
     .form .form-inline {
-      margin-right: 0;
+      margin-left: 200px;
     }
 
     .form-control{
 
-      height:50px;
+      height:40px;
 
-      margin: 10px;
+      margin: 40px;
 
     }
 
@@ -38,8 +39,9 @@
       padding: 10px 20px;
       font-size: 20px;
       border-radius: 10px;
-      border: 2px solid #000200;
-      color:#ffe821;
+      /* border: 2px solid #000200; */
+      background-color: #0a5cd6;
+      color:white;
   }
 
   h2 {
@@ -121,7 +123,7 @@
   }
 
   #form{
-    width: 600px;
+    width: 400px;
     background-image: url('http://veristream.com/wp-content/uploads/contact-form-background.jpg')
   }
 
