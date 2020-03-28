@@ -45,7 +45,7 @@ var SearchParking = React.createClass({
            <div className="container-logo">
               <img src="/assets/images/drive2park.png" style={{width:"200px", height:"200px",display:"block", margin:"auto"}}></img>
            </div>
-           <h2 className="text-center"> "<u>Find and Book Parking in seconds</u>"</h2>
+           <h2 className="text-center"> "Find and Book Parking in seconds"</h2>
            <form onSubmit={this.handleSubmit} className="form-inline" action="/action">
              <div className="form-group">
                <label htmlFor="city" className="indexlable"></label>
