@@ -15,8 +15,9 @@
     }
 
     .indexlable {
-      font-size: 22px;
-      font-family: Artifika;
+      font-size:26px;
+      font-family: 'Amiri', serif;
+      font-style: bold;
     }
 
     .form {
@@ -34,9 +35,9 @@
 
     .form-control{
 
-      height:50px;
-
+      height:40px;
       margin: 10px;
+      line-height: normal;
 
     }
 
@@ -46,11 +47,12 @@
   }
 
   .btn-xl {
-      padding: 10px 20px;
+     
       font-size: 20px;
-      border-radius: 10px;
-      border: 2px solid #000200;
-      color:#ffe821;
+      border-radius: 5px;
+      border: 1px solid #000200;
+      color:black;
+      background-color: transparent;
   }
 
   h2 {
