@@ -9,6 +9,8 @@
     .navbar {
     
         margin:0; /*add this*/
+        background-color: transparent;
+        border: none;
     }
 
     .indexlable {
