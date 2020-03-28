@@ -59,6 +59,7 @@
       font-size: 45px;
       font-family: 'Amiri', serif;
       font-style: italic;
+      letter-spacing: 1px;
   }
 
   .panel-success .panel-heading {
