@@ -19,9 +19,18 @@
       font-family: Artifika;
     }
 
-    .form .form-inline {
+    .form {
       margin-right: 0;
     }
+
+    .form-inline {
+      align-items: center !important;
+      justify-content: center !important;
+      display: flex;
+    }
+
+    
+
 
     .form-control{
 
