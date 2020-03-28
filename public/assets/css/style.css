@@ -1,6 +1,7 @@
 
     .jumbotron {
       color:black;
+      background-color: transparent;
     }
 
     #logo {
@@ -44,7 +45,9 @@
   }
 
   h2 {
-      font-size: 40px;
+      font-size: 50px;
+      font-family: 'Amiri', serif;
+      font-style: italic;
   }
 
   .panel-success .panel-heading {

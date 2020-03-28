@@ -42,7 +42,7 @@ var SearchParking = React.createClass({
      return( 
        <div className="jumbotron">
          <div id="frontcontainer" className="container">
-           <h2 className="text-center"> Find and Book Parking in seconds</h2>
+           <h2 className="text-center"> "Find and Book Parking in seconds"</h2>
            <form onSubmit={this.handleSubmit} className="form-inline" action="/action">
              <div className="form-group">
                <label htmlFor="city" className="indexlable">City:</label>
