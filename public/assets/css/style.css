@@ -132,7 +132,7 @@
 
   #formDiv{
     width: 400px;
-    margin: auto;
+    /* margin: auto; */
   }
 
   #amenities label{

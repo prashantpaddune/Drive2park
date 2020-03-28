@@ -51,7 +51,7 @@ var SearchParking = React.createClass({
                <label htmlFor="city" className="indexlable">City:</label>
                <input type="text" value={this.state.city} onChange={this.handleChange} className="form-control" id="city" placeholder="Enter City Name" name="city"/>
              </div>
-             <button type="submit" className="btn btn-success btn-xl">Search</button>
+             <button type="submit" className="btn btn-primary btn-xl">Search</button>
            </form>
          </div>  
        </div> 
