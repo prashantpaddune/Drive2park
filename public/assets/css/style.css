@@ -15,10 +15,8 @@
     }
 
     .indexlable {
-      margin-top: 50px;
-      font-size: 35px;
+      font-size: 22px;
       font-family: Artifika;
-      margin-left: 320px;
     }
 
     .form-inline {
@@ -26,12 +24,11 @@
     }
 
     .form-control{
+
       height:45px;
-      margin-top: 60px;
-      margin-right: 20px;
-      margin-left: 20px;
-      border-radius: 10px;
-      /* border: 2px solid black; */
+
+      margin-right: 40px;
+      margin-left: 40px;
 
     }
 
@@ -41,8 +38,7 @@
   }
 
   .btn-xl {
-    margin-top: 60px;
-      padding: 8px 20px;
+      padding: 10px 20px;
       font-size: 20px;
       border-radius: 10px;
       /* border: 2px solid #000200; */
