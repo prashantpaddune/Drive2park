@@ -45,11 +45,10 @@ var SearchParking = React.createClass({
            <div className="container-logo">
               <img src="/assets/images/drive2park.png" style={{width:"200px", height:"200px",display:"block", margin:"auto"}}></img>
            </div>
-           <h2 className="text-center"> "Find and Book Parking in seconds"</h2>
-           <form onSubmit={this.handleSubmit} className="form-inline" action="/action">
+           <h2 className="text-center"> Find and Book Parking in Seconds</h2>
+           <form onSubmit={this.handleSubmit} className="form-inline d-flex justify-content-center" action="/action">
              <div className="form-group">
-               <label htmlFor="city" className="indexlable"></label>
-               <input type="text" value={this.state.city} onChange={this.handleChange} className="form-control" id="city" placeholder="Enter City Name" name="city" size="40"/>
+               <input type="text" value={this.state.city} onChange={this.handleChange} className="form-control test" id="city" placeholder="Search City" name="city" size="40"/>
              </div>
              <button type="submit" className="btn btn-primary btn-xl">Search</button>
            </form>

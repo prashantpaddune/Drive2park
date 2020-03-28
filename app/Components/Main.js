@@ -83,7 +83,7 @@ getInitialState: function() {
     });
     return ( 
         <div>
-            <nav className="navbar navbar-inverse">
+            <nav className="navbar">
               <div className="container-fluid">
                 <div className="navbar-header">
                   <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -97,7 +97,7 @@ getInitialState: function() {
                   <ul className="nav navbar-nav">
 
 
-                    <li className="active"><Link to="/">Home</Link></li>
+                    <li className="active"><Link to="/"><img src="/assets/images/logo.png" style={{width:"120px", height:"30px",display:"block", margin:"auto"}}></img></Link></li>
                   </ul>
                  {/* <Link to="/list" id="ListPropertyButton" className="btn btn-default navbar-btn" 
                           aria-expanded="false">List Property
