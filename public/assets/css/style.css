@@ -9,6 +9,7 @@
     .navbar {
     
         margin:0; /*add this*/
+        background-color: white;
     }
 
     .indexlable {
@@ -103,7 +104,7 @@
     }
 
     #logo {
-      width: 150px;
+      width: 0px;
     }
 
     .carouselimg {
@@ -145,5 +146,5 @@
     display:inline-block;
   }
     .jumbotron {
-      background-color: none !important;
+      background-color: white !important;
     }

@@ -42,5 +42,16 @@
     "dev": "webpack & node server",
     "start": "node server.js",
     "build": "webpack"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prashantpaddune/Drive2park.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prashantpaddune/Drive2park/issues"
+  },
+  "homepage": "https://github.com/prashantpaddune/Drive2park#readme"
 }
