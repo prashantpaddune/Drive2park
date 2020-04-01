@@ -158,3 +158,10 @@
     .jumbotron {
       background-color: white ;
     }
+
+
+    .navbar-inverse .navbar-nav>.active>a{
+      color: #01a0b2;
+      font-size: large;
+      background-color: transparent !important;
+    }

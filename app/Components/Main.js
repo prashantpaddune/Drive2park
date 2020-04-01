@@ -97,7 +97,7 @@ getInitialState: function() {
                   <ul className="nav navbar-nav">
 
 
-                    <li className="active"><Link to="/">Home</Link></li>
+                    <li className="active" ><Link to="/">Drive2Park</Link></li>
                   </ul>
                  {/* <Link to="/list" id="ListPropertyButton" className="btn btn-default navbar-btn" 
                           aria-expanded="false">List Property
