@@ -13,23 +13,24 @@
         border:solid 2px white;
     }
 
-    .indexlable {
+    /* .indexlable {
       margin-top: 50px;
       font-size: 35px;
       font-family: Artifika;
       margin-left: 320px;
-    }
+    } */
 
     .form-inline {
+      display: flex;
       justify-content: center;
     }
 
     .form-control{
       height:45px;
       margin-top: 60px;
-      margin-right: 20px;
-      margin-left: 20px;
-      border-radius: 10px;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 50px;
       /* border: 2px solid black; */
 
     }
@@ -135,8 +136,8 @@
   } */
 
   #formDiv{
-    width: 400px;
-    /* margin: auto; */
+    width: 500px;
+    margin: auto;
   }
 
   #amenities label{
