@@ -18,18 +18,6 @@ var PostAdd = new Schema({
     type: String,
     match: [/.+\@.+\..+/, "Please enter a valid e-mail address"]
   },
-  // userCreated: the current date
-  venueType: {
-    type: String,
-    
-  },
-  occupancy: {
-    type: String,
-    
-  },
-    amenities: [{
-    type: String
-}],
   description:{
     
     type: String,

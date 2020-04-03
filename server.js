@@ -86,9 +86,6 @@ app.post('/insert', function(req, res, next){
   var item =({
     venueName : req.body.venueName,
     email: req.body.email,
-    venueType: req.body.venueType,
-    occupancy: req.body.occupancy,
-    amenities: req.body.amenities,
     date: req.body.date,
     time: req.body.time,
     price: req.body.price

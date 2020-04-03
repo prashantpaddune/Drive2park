@@ -79,14 +79,11 @@ var DetailsPage = React.createClass({
               <div className="row">
                   <div className="col-md-8">
                     <div id="pricingpanel" className="panel panel-success">
-                      <div className="panel-heading">About The Property</div>
+                      <div className="panel-heading">About The Parking Lot</div>
                       <div className="panel-body">{this.state.property[0].description} </div>
                     </div>
                     <div  className="panel panel-warning">
                       <div className="panel-heading">Details</div>
-                      <div className="panel-body">Venue Type : {this.state.property[0].venueType}</div>
-                      <div className="panel-body">Occupancy : {this.state.property[0].occupancy}</div>
-                      <div className="panel-body">Amenities : {this.state.property[0].amenities[0]} | {this.state.property[0].amenities[1]} | {this.state.property[0].amenities[2]}</div>
                       <div className="panel-body">Address : {this.state.property[0].address},{this.state.property[0].city},{this.state.property[0].state} {this.state.property[0].postal}</div>
                     </div>
 
