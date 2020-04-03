@@ -37,7 +37,7 @@ var helpers = {
 	},
 
 	getListingById: function(propertyId) {
-		return axios.get("/api/authentication/property/" + propertyId)
+		return axios.get("/api/authentication/parking/" + propertyId)
 	}
 
 };

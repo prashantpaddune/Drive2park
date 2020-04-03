@@ -75,13 +75,14 @@ var SearchParking = React.createClass({
                     </div>
                     <div>
                       <ul>
-                        <li>Venue Type: { listing.venueType }</li>
-                        <li>Occupancy: { listing.occupancy }</li>
-                        <li>Amenities: { listing.amenities[0] } | { listing.amenities[1] } </li>
+                        <li>About: { listing.description }</li>
+                        <li>Address: { listing.address} { listing.city} { listing.state} { listing.postal}</li>
+                        <li>Date: { listing.date }</li>
+                        <li>Rental Price: { listing.price }, Days: { listing.days } </li>
                       </ul>
                     </div>
                   </div>
-                  <Link to={"/property/" + listing._id} className="btn btn-warning" data={listing._id} id="details">View</Link>
+                  <Link to={"/parking/" + listing._id} className="btn btn-warning" data={listing._id} id="details">View</Link>
                 </div>
               </div>
               <div className="col-md-4">
