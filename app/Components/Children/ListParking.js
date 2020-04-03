@@ -16,9 +16,6 @@ var ListProperty = React.createClass({
   return {
     venueName: "",
     email: "",
-    venueType: "",
-    occupancy: "",
-    amenities: [],
     address: "",
     city:"",
     state: "",
@@ -62,9 +59,6 @@ var ListProperty = React.createClass({
         userId: this.props.userId,
         venueName: this.state.venueName,
         email: this.state.email,
-        venueType: this.state.venueType,
-        occupancy: this.state.occupancy,
-        amenities: this.state.amenities,
         date: this.state.date,
         days: this.state.days,
         time: this.state.time,
@@ -86,8 +80,6 @@ var ListProperty = React.createClass({
      this.setState({ 
       venueName: "",
       email: "",
-      venueType: "",
-      occupancy: "",
       date: "",
       days: "",
       time: "",
@@ -152,54 +144,10 @@ var ListProperty = React.createClass({
               <input type="text" value={this.state.email} onChange={this.handleChange} className="form-control" id="email" name="email" placeholder="alex@smith.com" />
             
           </div>
-
-           <div className="form-group ">
-            <label className="control-label col-sm-2" for="venueType">
-              Venue Type
-            </label>
-            <div className="form-group" id="venueType">
-             <select className="selectpicker btn-lg" name="venueType" value={this.state.venueType} onChange={this.handleChange}>
-              <option>Event Space</option>
-              <option>Meeting Space</option>
-              <option>Others</option>
-            </select>
-            </div>
-           </div>
-
-           <div className="form-group ">
-            <label className="control-label col-sm-3" for="occupancy">
-              Occupancy
-            </label>
-           
-            <select className="selectpicker btn-lg" name="occupancy" value={this.state.occupancy} onChange={this.handleChange}>
-             <option>20-50</option>
-             <option>50-80</option>
-             <option>80-120</option>
-             <option>120-150</option>
-            </select>            
-           </div>
           
-           <div className="form-group" id="amenities">
-            <label className="control-label col-sm-3" for="amenities">
-              Amenities
-
-            </label>
-              <CheckboxGroup 
-                className="btn-sm"
-                name="amenities"
-                value={this.state.amenities}
-                onChange={this.amenitiesChanged} id="cbox">
-                
-                <label><Checkbox value="Wifi"/> Wifi</label>
-                <label><Checkbox value="TV"/> TV</label>
-                <label><Checkbox value="Speakers"/> Speakers</label>
-                <label><Checkbox value="Pool"/> Pool</label>
-                <label><Checkbox value="Pool"/> Parking</label>
-              </CheckboxGroup>
-          </div>
             <div className="form-group ">
             <label className="control-label" for="description">
-              About the property 
+              About the Parking Lot 
             </label>
               <textarea className="form-control" name="description" value={this.state.description} onChange={this.handleChange}></textarea>
             </div>
