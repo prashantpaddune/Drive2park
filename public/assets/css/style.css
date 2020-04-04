@@ -126,7 +126,6 @@
   #each_row {
     margin-bottom: 30px;
     border:1px solid grey;
-    border-radius: 5px;
     padding: 20px 0px 25px;
     
   }
