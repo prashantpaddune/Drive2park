@@ -163,3 +163,14 @@
     .nav>li>a:focus, .nav>li>a:hover{
         background-color: white !important;
     }
+
+    
+.btn-warning {
+  color: #fff;
+  background-color: #005082;
+  border: none;
+  padding: 6px 15px;
+  margin-left:30px
+}
+
+
