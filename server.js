@@ -8,6 +8,7 @@ const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
+const fileUpload = require('express-fileupload');
 const expressSession = require('express-session')({
   secret: 'random strings here',
   resave: false,
@@ -26,6 +27,31 @@ const PostAdd = require('./models/postAdd');
 const authentication = require('./routes/api/authentication');
 
 const app = express();
+
+app.use(fileUpload());
+
+app.post("/upload", function(res,req) {
+  if(!req.files) {
+    res.send("No file uploaded");
+  }
+  else {
+    const file = req.files.file;
+    const extension = path.extname(file.name);
+    if(extension !=="png" && extension !== ".gif" && extension !==".jpg"){
+      res.send("only images are allowed");
+    }
+    else {
+      file.mv(__dirname+"/uploads/" + file.name, function(err) {
+        if(err) {
+          res.status(500).send(err);
+        }
+        else {
+          res.send("File Uploaded");
+        }
+      });
+    }
+  }
+})
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
