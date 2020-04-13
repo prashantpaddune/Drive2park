@@ -85,8 +85,6 @@ var SearchParking = React.createClass({
                   <Link to={"/parking/" + listing._id} className="btn btn-warning" data={listing._id} id="details">View</Link>
                 </div>
               </div>
-              <div className="col-md-4">
-              </div>
             </div>
           );
 
