@@ -109,7 +109,7 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 3001;
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var db = process.env.MONGODB_URI || "mongodb://localhost/drive2park";
+var db = process.env.MONGODB_URI || "mongodb://mongo/drive2park";
 // Connect mongoose to our database
 mongoose.connect(db, { 
   useNewUrlParser: true, 
