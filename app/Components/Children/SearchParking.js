@@ -68,7 +68,7 @@ var SearchParking = React.createClass({
               <div className="col-md-8">
                 <div  id="each_row">
                   <div className="col-md-3">
-                    {/* <img src={image_src} className="img-thumbnail " /> */}
+                    <img src={image_src} className="img-thumbnail " />
                   </div>
                   <div className="col-md-9">
                     <div>
