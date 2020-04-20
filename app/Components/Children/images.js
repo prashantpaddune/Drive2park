@@ -22,16 +22,16 @@ var Images = React.createClass({
   console.log('uploadFile: ')
   const image = files[0]
 
-  const cloudName= 'dpmarswfv';
+  const cloudName= 'dyd0ckv4b';
   const url = 'https://api.cloudinary.com/v1_1/'+cloudName+'/image/upload';
   const timestamp = Date.now()/1000
-  const uploadPreset = 'hkihatok'
-  const paramsStr = 'timestamp='+ timestamp + '&upload_preset='+ uploadPreset+'1v6I96fttzLXwtcPBozs1seTM-w'
+  const uploadPreset = 'kdjlvq5o'
+  const paramsStr = 'timestamp='+ timestamp + '&upload_preset='+ uploadPreset+'UhMVnfpYNyRpNg7CtVH3j-zIHOw'
 
   const signature = sha1(paramsStr)
 
   const params ={
-    'api_key': '824968653797173',
+    'api_key': '748592412323862',
     'timestamp': timestamp,
     'upload_preset': uploadPreset,
     'signature': signature
