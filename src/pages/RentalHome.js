@@ -4,6 +4,7 @@ import React from 'react';
 import RentalCard from 'components/rental/RentalCard';
 import { connect } from 'react-redux'
 import { fetchRentals } from 'actions';
+import RentalSearchInput from "../components/rental/RentalSearchInput";
 
 class RentalHome extends React.Component {
 
@@ -22,12 +23,15 @@ class RentalHome extends React.Component {
     const { rentals } = this.props;
 
     return (
-      <div className="card-list">  
-        <h1 className="page-title">Your Home All Around the World</h1>
-        <div className="row">
-          { this.renderRentals(rentals) }
+        <div>
+          <RentalSearchInput/>
+          <div className="card-list">
+            <h1 className="page-title">Your Home All Around the World</h1>
+            <div className="row">
+              { this.renderRentals(rentals) }
+            </div>
+          </div>
         </div>
-      </div>
     )
   }
 }

@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import RentalSearchInput from 'components/rental/RentalSearchInput';
 
-const Header = ({username, isAuth, logout}) => {
+const Header = ({isAuth, logout}) => {
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link className="navbar-brand" to="/">BookWithMe</Link>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -18,20 +18,6 @@ const Header = ({username, isAuth, logout}) => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <RentalSearchInput />
         <ul className="navbar-nav ml-auto">
-          { isAuth &&
-            <li className="nav-item">
-              <div 
-                className="nav-link">Welcome {username} 
-              </div>
-            </li>
-          }
-          <li className="nav-item active">
-            <Link 
-              className="nav-link" 
-              to="/">Home 
-              <span className="sr-only">(current)</span>
-            </Link>
-          </li>
           { isAuth &&
             <>
               <li className="nav-item dropdown">
