@@ -7,7 +7,6 @@ const rentalSchema = new Schema({
   city: { type: String, required: true, lowercase: true },
   street: { type: String, lowercase: true, required: true, minlength: [4, 'Invalid length! Minimum is 4 characters']},
   category: { type: String, required: true, lowercase: true },
-  numOfRooms: { type: Number, required: true },
   description: { type: String, required: true },
   dailyPrice: { type: Number, required: true },
   shared: Boolean,

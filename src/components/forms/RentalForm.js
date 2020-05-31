@@ -70,16 +70,6 @@ const RentalForm = ({onSubmit}) => {
       </div>
 
       <div className="form-group">
-        <label htmlFor="bedrooms">Rooms</label>
-        <input 
-          ref={register}
-          name="numOfRooms"
-          type="number"
-          className="form-control"
-          id="numOfRooms"/>
-      </div>
-
-      <div className="form-group">
         <label htmlFor="description">Description</label>
         <textarea 
           ref={register}

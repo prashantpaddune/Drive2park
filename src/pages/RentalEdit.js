@@ -121,24 +121,6 @@ class RentalEdit extends React.Component {
                 transformView={value => capitalize(value)}
                 className={'rental-street'}
               />
-              <div className="rental-room-info mb-1">
-                <span>
-                  <FontAwesomeIcon icon="building" />
-                  <EditableInput
-                    entity={rental}
-                    field={'numOfRooms'}
-                    onUpdate={this.updateRental}
-                    containerType={"inline"}
-                    className={'mr-0 ml-2'}
-                  /> bedrooms
-                </span>
-                <span>
-                  <FontAwesomeIcon icon="user"/> {rental.numOfRooms + 4} guests
-                </span>
-                <span>
-                  <FontAwesomeIcon icon="bed"/> {rental.numOfRooms + 2} beds
-                </span>
-              </div>
               <EditableTextarea
                 entity={rental}
                 field={'description'}
