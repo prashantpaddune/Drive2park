@@ -122,7 +122,7 @@ class BookingReserve extends React.Component {
     const { errors, proposedBooking: { nights, guests, price}} = this.state;
     return (
       <div className='booking'>
-        <h3 className='booking-price'>₹ {rental.dailyPrice} <span className='booking-per-night'>per night</span></h3>
+        <h3 className='booking-price'>₹ {rental.dailyPrice} <span className='booking-per-night'> / Day</span></h3>
         <hr></hr>
         { !isAuth &&
           <Link 
@@ -169,21 +169,16 @@ class BookingReserve extends React.Component {
               </button>}
           >
             <div className="mb-2">
-              <em>{nights}</em> Nights /
-              <em> ${rental.dailyPrice}</em> per Night
+              <em>{nights}</em> Days /
+              <em>₹{rental.dailyPrice}</em> / Day
               <p>Guests: <em>{guests}</em></p>
-              <p>Price: <em>${price}</em></p>
+              <p>Price: <em>₹{price}</em></p>
               <p>Do you confirm your booking for selected days?</p>
             </div>
             <ApiErrors errors={errors}/>
           </BwmModal>
         </>
         }
-        <hr></hr>
-        <p className='booking-note-title'>People are interested into this house</p>
-        <p className='booking-note-text'>
-          More than 500 people checked this rental in last month.
-        </p>
       </div>
     )
   }

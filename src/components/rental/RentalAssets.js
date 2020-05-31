@@ -8,24 +8,12 @@ const RentalAssets = () =>
     <div className="row">
       <div className="col-md-6">
         <span>
-          <FontAwesomeIcon icon="asterisk" /> Cooling
-        </span>
-        <span>
-          <FontAwesomeIcon icon="thermometer" /> Heating
-        </span>
-        <span>
-          <FontAwesomeIcon icon="location-arrow" /> Iron
+          <FontAwesomeIcon icon="motorcycle" /> Bike
         </span>
       </div>
       <div className="col-md-6">
         <span>
-          <FontAwesomeIcon icon="desktop" /> Working area
-        </span>
-        <span>
-          <FontAwesomeIcon icon="cube" /> Washing machine
-        </span>
-        <span>
-          <FontAwesomeIcon icon="archive" /> Dishwasher
+          <FontAwesomeIcon icon="car" /> Car
         </span>
       </div>
     </div>

@@ -7,8 +7,7 @@ import TomMap from 'components/map/TomMap';
 import RentalAssets from 'components/rental/RentalAssets';
 import { capitalize } from 'helpers/functions'
 import { toast } from 'react-toastify';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { 
+import {
   EditableInput,
   EditableTextarea,
   EditableSelect,
