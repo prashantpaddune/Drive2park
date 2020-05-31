@@ -31,7 +31,7 @@ class Login extends React.Component {
       <div className="bwm-form">
         <div className="row">
           <div className="col-md-5">
-            <h1 className="page-title">Login</h1>
+            <h1 className="page-title text-center mt-5">Login</h1>
             { message &&
               <div className="alert alert-success">
                 {message}

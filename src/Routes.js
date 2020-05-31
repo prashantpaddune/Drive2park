@@ -21,7 +21,7 @@ import ManageRentals from 'pages/ManageRentals';
 
 const Routes = () => {
   return (
-    <div className="container bwm-container">
+    <div className="container">
       <Switch>
         <Route exact path="/">
           <RentalHome />

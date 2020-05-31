@@ -14,7 +14,7 @@ const BookingListing = ({
   title = "Bookings"}) => {
 
   return (
-    <section className="booking-listing">
+    <section className="booking-listing text-center mt-5">
       <h1 className="page-title">{title}</h1>
       { !isFetching && bookings.length === 0 &&
         <p className="alert alert-warning">No bookings created :(</p>

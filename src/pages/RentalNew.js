@@ -29,7 +29,7 @@ class RentalNew extends React.Component {
         <div className="bwm-form">
           <div className="row">
             <div className="col-md-5">
-              <h1 className="page-title">Create Rental</h1>
+              <h1 className="page-title text-center mt-5">Create Rental</h1>
               <RentalForm onSubmit={this.handleRentalCreate} />
               {/* <div>
                 <p>

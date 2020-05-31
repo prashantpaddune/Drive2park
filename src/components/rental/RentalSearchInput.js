@@ -19,18 +19,21 @@ const RentalSearchInput = () => {
   }
 
   return (
-    <div className="form-inline my-2 my-lg-0">
+    <div className="form-inline my-2 my-lg-0 d-flex justify-content-center">
       <input 
         onKeyPress={handleKeyPress}
         onChange={e => setLocation(e.target.value)}
         value={location}
         className="form-control mr-sm-2 bwm-search" 
         type="search" 
-        placeholder="Try 'New York'" />
+        placeholder="Try 'Mumbai'"
+        size="80"
+        style={{borderRadius: 20}}/>
       <button
         onClick={handleSearch} 
-        className="btn btn-bwm-main btn-outline-success my-2 my-sm-0" 
-        type="button">Search</button>
+        className="btn btn-bwm-main btn-outline-success my-2 my-sm-0"
+        type="button"
+      >Search</button>
     </div>
   )
 }

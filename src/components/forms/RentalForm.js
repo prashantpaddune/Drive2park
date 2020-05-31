@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import FileLoader from 'components/file-upload/FileLoader';
 
-const rentalOptions = ['apartment', 'condo', 'house'];
+const rentalOptions = ['Apartment Parking', 'Condo Parking', 'House Parking', 'Other'];
 
 const RentalForm = ({onSubmit}) => {
 
@@ -95,7 +95,7 @@ const RentalForm = ({onSubmit}) => {
         <label htmlFor="dailyRate">Daily Price</label>
         <div className="input-group">
           <div className="input-group-prepend">
-            <div className="input-group-text">$</div>
+            <div className="input-group-text">₹</div>
           </div>
           <input
             ref={register}

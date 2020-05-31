@@ -45,8 +45,8 @@ class RentalHomeSearch extends React.Component {
     const { rentals } = this.props;
     
     return (
-      <div className="card-list">  
-        <h1 className="page-title">Your Home in "{capitalize(this.location)}"</h1>
+      <div className="card-list mt-3">
+        <h1 className="page-title">Parking Space in "{capitalize(this.location)}"</h1>
         <div className="row">
           { this.renderRentals(rentals) }
         </div>

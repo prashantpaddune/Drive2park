@@ -24,13 +24,20 @@ class RentalHome extends React.Component {
 
     return (
         <div>
-          <RentalSearchInput/>
-          <div className="card-list">
-            <h1 className="page-title">Your Home All Around the World</h1>
-            <div className="row">
-              { this.renderRentals(rentals) }
+            <div className="container-logo">
+                <img
+                    src="/images/drive2park.png"
+                    alt="..."
+                    style={{width:"200px", height:"200px",display:"block", margin:"auto"}}>
+                </img>
             </div>
-          </div>
+            <h1 className="page-title text-center">Find and Book Parking in Seconds</h1>
+            <RentalSearchInput/>
+            <div className="card-list mt-4">
+                <div className="row">
+                    { this.renderRentals(rentals) }
+                </div>
+            </div>
         </div>
     )
   }

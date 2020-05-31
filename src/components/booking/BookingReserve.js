@@ -122,7 +122,7 @@ class BookingReserve extends React.Component {
     const { errors, proposedBooking: { nights, guests, price}} = this.state;
     return (
       <div className='booking'>
-        <h3 className='booking-price'>$ {rental.dailyPrice} <span className='booking-per-night'>per night</span></h3>
+        <h3 className='booking-price'>₹ {rental.dailyPrice} <span className='booking-per-night'>per night</span></h3>
         <hr></hr>
         { !isAuth &&
           <Link 
