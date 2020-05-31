@@ -105,15 +105,6 @@ const RentalForm = ({onSubmit}) => {
             id="dailyPrice"/>
         </div>
       </div>
-      <div className="form-group">
-        <label htmlFor="shared">Shared</label>
-        <input 
-          ref={register}
-          name="shared"
-          type="checkbox"
-          className="form-control"
-          id="shared"/>
-      </div>
       <button 
         type="submit"
         className="btn btn-bwm-main">Create

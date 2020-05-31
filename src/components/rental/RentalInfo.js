@@ -6,7 +6,7 @@ import { capitalize } from 'helpers/functions';
 const RentalInfo = ({rental}) =>
   <div className="rental">
     <h2 className={`rental-type type-${rental.category}`}>
-      {rental.shared ? 'Shared' : 'Whole'} {rental.category}
+      {rental.category}
     </h2>
     { rental.owner &&
       <div className="rental-owner">

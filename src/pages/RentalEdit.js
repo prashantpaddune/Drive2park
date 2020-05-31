@@ -94,15 +94,6 @@ class RentalEdit extends React.Component {
           <div className="row">
             <div className="col-md-8">
             <div className="rental">
-              <span className="rental-city">Is shared: </span>
-              <EditableSelect
-                entity={rental}
-                field={'shared'}
-                containerType={"inline"}
-                options={[true, false]}
-                onUpdate={this.updateRental}
-                className={`rental-type type-${rental.category}`}
-              />
               <EditableSelect
                 entity={rental}
                 field={'category'}
