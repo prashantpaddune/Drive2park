@@ -42,7 +42,7 @@ class Login extends React.Component {
           </div>
           <div className="col-md-6 ml-auto">
             <div className="image-container">
-              <h2 className="catchphrase">Hundreds of awesome places in reach of few clicks.</h2>
+              <h2 className="catchphrase">The best solution in Renting Parking Space.</h2>
               <img src="/images/login-image.jpg" alt="Login an user" />
             </div>
           </div>
