@@ -46,7 +46,6 @@ exports.getUserBookings = async (req, res) => {
 }
 
 exports.deleteBooking = async (req, res) => {
-  const DAYS_THRESHOLD = 3;
   const { bookingId } = req.params;
   const { user } = res.locals;
 
@@ -59,13 +58,13 @@ exports.deleteBooking = async (req, res) => {
           detail: 'You are not owner of this booking!'});
     }
 
-    if (moment(booking.startAt).diff(moment(), 'days') > DAYS_THRESHOLD) {
+    if (moment(booking.startAt)) {
       await booking.remove();
       return res.json({id: bookingId});
     } else {
       return res.sendApiError(
-        { title: 'Invalid Booking', 
-          detail: 'You cannot delete booking at least 3 days before arrival!'});
+        { title: 'Invalid Booking',
+          detail: 'Failed to Cancel your Booking'});
     }
   } catch(error) {
     return res.mongoError(error);
