@@ -9,7 +9,6 @@ const bookingSchema = new Schema({
   endAt: { type: Date, required: 'Ending date is required'},
   price: { type: Number, required: true },
   nights: { type: Number, required: true },
-  guests: { type: Number, required: true },
   user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   rental: { type: Schema.Types.ObjectId, ref: 'Rental', required: true },
   createdAt: { type: Date, default: Date.now }

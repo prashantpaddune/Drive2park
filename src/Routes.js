@@ -35,7 +35,7 @@ const Routes = () => {
         <AuthRoute path="/rentals/manage">
           <ManageRentals />
         </AuthRoute>
-        <Route path="/rentals/:location/homes">
+        <Route path="/rentals/:location/space">
           <RentalHomeSearch />
         </Route>
         <AuthRoute path="/rentals/new">

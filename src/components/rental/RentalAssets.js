@@ -4,16 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const RentalAssets = () => 
   <div className="rental-assets">
-    <h3 className="title">Assets</h3>
     <div className="row">
       <div className="col-md-6">
         <span>
-          <FontAwesomeIcon icon="motorcycle" /> Bike
+          <FontAwesomeIcon icon="motorcycle" /> Bike Parking
         </span>
       </div>
       <div className="col-md-6">
         <span>
-          <FontAwesomeIcon icon="car" /> Car
+          <FontAwesomeIcon icon="car" /> Car Parking
         </span>
       </div>
     </div>

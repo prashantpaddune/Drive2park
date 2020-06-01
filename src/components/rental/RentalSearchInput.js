@@ -14,7 +14,7 @@ const RentalSearchInput = () => {
 
   const handleSearch = () => {
     location ? 
-      history.push(`/rentals/${location}/homes`) :
+      history.push(`/rentals/${location}/space`) :
       history.push('/')
   }
 

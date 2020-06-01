@@ -21,7 +21,6 @@ class BookingReserve extends React.Component {
     this.state = {
       errors: [],
       proposedBooking: {
-        guests: '',
         startAt: null,
         endAt: null
       }
@@ -79,7 +78,7 @@ class BookingReserve extends React.Component {
     this.dateRef.current.value = '';
     this.setState({
       errors: [],
-      proposedBooking: {guests: '', startAt: null, endAt: null}
+      proposedBooking: {startAt: null, endAt: null}
     })
   }
 
@@ -109,8 +108,8 @@ class BookingReserve extends React.Component {
   }
 
   get isBookingValid() {
-    const { startAt, endAt, guests} = this.state.proposedBooking;
-    return startAt && endAt && guests;
+    const { startAt, endAt} = this.state.proposedBooking;
+    return startAt && endAt;
   }
 
   get formattedDate() {
@@ -119,7 +118,7 @@ class BookingReserve extends React.Component {
 
   render() {
     const { rental, isAuth } = this.props;
-    const { errors, proposedBooking: { nights, guests, price}} = this.state;
+    const { errors, proposedBooking: { nights, price}} = this.state;
     return (
       <div className='booking'>
         <h3 className='booking-price'>₹ {rental.dailyPrice} <span className='booking-per-night'> / Day</span></h3>
@@ -146,17 +145,6 @@ class BookingReserve extends React.Component {
             </input>
           </DateRangePicker>
           </div>
-          <div className='form-group'>
-            <label htmlFor='guests'>Guests</label>
-            <input 
-              onChange={this.handleGuestsChange}
-              value={guests}
-              type='number'
-              className='form-control'
-              id='guests'
-              aria-describedby='guests'>
-            </input>
-          </div>
           <BwmModal
             onSubmit={this.reserveRental}
             title="Confirm Booking"
@@ -171,7 +159,6 @@ class BookingReserve extends React.Component {
             <div className="mb-2">
               <em>{nights}</em> Days /
               <em>₹{rental.dailyPrice}</em> / Day
-              <p>Guests: <em>{guests}</em></p>
               <p>Price: <em>₹{price}</em></p>
               <p>Do you confirm your booking for selected days?</p>
             </div>
