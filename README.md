@@ -2,22 +2,23 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## How to run this project
 
-Create `dev.js` file in `server/config/dev.js` with content of:
+File in `server/config/dev.js` with content of:
 
 ```javascript
 module.exports = {
   DB_URI: 'your_mongo_db_connection_string', // Get it here -> https://www.mongodb.com/
-  JWT_SECRET: 'some_unique_value' // e.g: 'dasid7asd7xc68zxc!'
+  JWT_SECRET: 'some_unique_value', // e.g: 'dasid7asd7xc68zxc!'
+  
+//Connect Cloudinary API, Get it here -> https://cloudinary.com/
+  CLOUDINARY_NAME: 'cloudinary_name', 
+  CLOUDINARY_KEY: 'cloudinary_key', 
+  CLOUDINARY_SECRET: 'cloudinary_secret'
 }
 ```
 
-In base folder of project run `npm install` and then `npm start`
+To run Backend api server, run `npm start`.
 
-To run api server navigate to server folder `cd server` and run `node index.js`
-
-## How to populate DB
-
-In case your `dev.js` file is created you can run in `server` folder command to populate database `node fakeDB/cleanDB.js`
+To run Frontend server, run `npm run-script start-dev`.
 
 ## Available Scripts
 
