@@ -1,22 +1,23 @@
 version: '2'
 services:
-  mongodb:
+  mongo:
     image: "mongo"
     ports:
       - "27017:27017"
   backend:
-    build: ./server/
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    environment:
+      - DB_URI="mongodb://mongo:27017/drive2park"
     ports:
-      - "3001:3001"
-    volumes:
-      - ./server:/usr/src/app
+      - "8080:3001"
     depends_on:
-      - mongodb
+      - mongo
   frontend:
     build: .
     ports:
-      - "3000:3000"
-    volumes:
-      - /usr/src/app
+      - "80:3000"
     depends_on:
       - backend
+      - mongo

@@ -4,4 +4,4 @@ COPY package.json .
 RUN npm install
 EXPOSE 3000
 COPY . .
-CMD ["npm", "start-dev"]
+CMD ["node", "src/index.js"]
