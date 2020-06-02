@@ -14,7 +14,6 @@ import RentalEdit from 'pages/RentalEdit';
 import RentalNew from './pages/RentalNew';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import SecretPage from 'pages/SecretPage';
 import ManageBookings from 'pages/ManageBookings';
 import ReceivedBookings from 'pages/ReceivedBookings';
 import ManageRentals from 'pages/ManageRentals';
@@ -47,9 +46,6 @@ const Routes = () => {
         <Route path="/rentals/:id">
           <RentalDetail />
         </Route>
-        <AuthRoute path="/secret">
-          <SecretPage />
-        </AuthRoute>
         <GuestRoute path="/login">
           <Login />
         </GuestRoute>
