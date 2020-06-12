@@ -1,7 +1,5 @@
 FROM node:13-buster-slim
 WORKDIR /usr/node/app/
-COPY ./package.json ./package-lock.json ./
-RUN npm install
-COPY ./server .
+
 EXPOSE 3001
 CMD ["node", "index.js"]

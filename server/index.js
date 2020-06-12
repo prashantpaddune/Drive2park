@@ -23,7 +23,7 @@ require('./models/cloudinary-image');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-mongoose.connect(process.env.DB_URI || config.DB_URI, {
+mongoose.connect(config.DB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true
