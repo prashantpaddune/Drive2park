@@ -1,3 +1,27 @@
+# Drive2park
+Drive2park is an Online Marketplace for booking parking space.Drive2park makes it easy to find
+and book parking space for any location.
+
+<img src="https://github.com/prashantpaddune/Drive2park/raw/master/public/assets/images/drive2park.png" height="200"/>
+ 
+## Screenshots
+
+
+<p>
+<img src="https://github.com/prashantpaddune/Drive2park/blob/v2/screenshots/Screenshot%20from%202020-06-02%2014-45-50.png?raw=true">
+<img src="https://github.com/prashantpaddune/Drive2park/blob/v2/screenshots/Screenshot%20from%202020-06-02%2014-46-13.png?raw=true">
+<img src="https://github.com/prashantpaddune/Drive2park/blob/v2/screenshots/Screenshot%20from%202020-06-02%2014-48-17.png?raw=true">
+<img src="https://github.com/prashantpaddune/Drive2park/blob/v2/screenshots/Screenshot%20from%202020-06-02%2014-49-54.png?raw=true">
+<img src="https://github.com/prashantpaddune/Drive2park/blob/v2/screenshots/Screenshot%20from%202020-06-02%2014-50-23.png?raw=true">
+<img src="https://github.com/prashantpaddune/Drive2park/blob/v2/screenshots/Screenshot%20from%202020-06-02%2014-51-40.png?raw=true">
+<img src="https://github.com/prashantpaddune/Drive2park/blob/v2/screenshots/Screenshot%20from%202020-06-02%2014-52-11.png?raw=true">
+<img src="https://github.com/prashantpaddune/Drive2park/blob/v2/screenshots/Screenshot%20from%202020-06-02%2014-52-50.png?raw=true">
+<img src="https://github.com/prashantpaddune/Drive2park/blob/v2/screenshots/Screenshot%20from%202020-06-02%2014-53-25.png?raw=true">
+<img src="https://github.com/prashantpaddune/Drive2park/blob/v2/screenshots/Screenshot%20from%202020-06-02%2014-53-55.png?raw=true">
+<br>
+
+</p>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## How to run this project
@@ -20,6 +44,16 @@ To run Backend api server, run `npm start`.
 
 To run Frontend server, run `npm run-script start-dev`.
 
+## How to Contribute
+1. Fork the the project
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Make required changes and commit (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new Pull Request
+
+## License
+
+This project is licensed under the GNU General Public License v3.0
 ## Available Scripts
 
 In the project directory, you can run:
