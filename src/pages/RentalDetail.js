@@ -31,7 +31,10 @@ class RentalDetail extends React.Component {
         <div className="upper-section">
           <div className="row">
             <div className="col-md-6">
-              <img className="rental-img" src={rental.image.url} alt={rental.title} />
+              <img className="rental-img"
+                   src={rental.image ? rental.image.url : "/images/img-no-thumbnail.png"}
+                   alt={rental.title}
+              />
             </div>
             <div className="col-md-6">
               <TomMap location={this.location}/>
@@ -43,17 +46,17 @@ class RentalDetail extends React.Component {
             <div className="col-md-8">
               <RentalInfo rental={rental} />
             </div>
-            <div className="col-md-4"> 
+            <div className="col-md-4">
               <BookingReserve rental={rental} isAuth={isAuth}/>
             </div>
           </div>
         </div>
-      </section> 
+      </section>
     )
   }
 }
 
-const mapStateToProps = ({rental, auth: { isAuth }}) => 
+const mapStateToProps = ({rental, auth: { isAuth }}) =>
   ({ rental: rental.item, isFetching: rental.isFetching, isAuth: isAuth })
 
 const RentalDetailWithRouter = withRouter(RentalDetail);
