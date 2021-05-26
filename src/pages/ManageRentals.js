@@ -25,18 +25,18 @@ class ManageRentals extends React.Component {
 
   renderRentals = (rentals) => 
     rentals.map(rental => 
-      <div key={rental._id} className="col-md-3">
+      <div key={rental._id} className="col-lg-3">
         <RentalCard 
           rental={rental}
           renderMenu={() => 
-            <>
+            <div className="px-5 py-3">
               <button 
                 onClick={() => this.deleteRental(rental._id)}
                 className="btn btn-danger">Delete</button>
               <Link 
                 to={{pathname: `/rentals/${rental._id}/edit`}}
                 className="btn btn-bwm-main ml-2">Update</Link>
-            </>
+            </div>
           }
         />
       </div>

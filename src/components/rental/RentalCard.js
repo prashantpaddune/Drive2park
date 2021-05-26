@@ -7,7 +7,7 @@ const RentalCard = ({rental, renderMenu}) => {
     return (
         <>
           <Link className="rental-link" to={`/rentals/${rental._id}`}>
-            <div className="card bwm-card">
+            <div className="card bwm-card mt-4">
               <img
                   className="card-img-top"
                   src={rental.image ? rental.image.url : "/images/img-no-thumbnail.png"}

@@ -24,14 +24,14 @@ const RentalSearchInput = () => {
         onKeyPress={handleKeyPress}
         onChange={e => setLocation(e.target.value)}
         value={location}
-        className="form-control mr-sm-2 bwm-search" 
+        className="form-control mt-4 mr-sm-2 bwm-search"
         type="search" 
         placeholder="Try 'Mumbai'"
         size="80"
         style={{borderRadius: 20}}/>
       <button
         onClick={handleSearch} 
-        className="btn btn-bwm-main btn-outline-success my-2 my-sm-0"
+        className="btn btn-bwm-main btn-outline-success mt-4"
         type="button"
       >Search</button>
     </div>
